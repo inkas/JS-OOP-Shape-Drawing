@@ -3,6 +3,7 @@
 JavaScript OOP App for drawing shapes on canvas. I've also created a small library.
 
 The app covers:
+
 1. Creation of classes
 2. Inheritance
 3. Revealing Prototype Pattern
