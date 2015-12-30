@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS OOP Drawing Shapes</title>
+		<script src="js/myTinyFramework.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/app.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<h1>Canvas Geometry API</h1>
+		<div class="wrapper">
+			<div class="clearfix">
+				<div class="col-half">
+					<form id="shapeForm" method="POST" action="#">
+						<div>
+							<label for="shapes-select">
+								<strong>Shape:</strong>
+							</label>
+							<select id="shapes-select">
+								<option value="Default" selected>Select a shape</option>
+								<option value="Circle" data-toggle=".x-field, .y-field, .radius-field">Circle</option>
+								<option value="Rectangle" data-toggle=".x-field, .y-field, .width-field, .height-field">Rectangle</option>
+								<option value="Triangle" data-toggle=".x-field, .y-field, .x2-field, .y2-field, .x3-field, .y3-field">Triangle</option>
+								<option value="Line" data-toggle=".x-field, .y-field, .x2-field, .y2-field">Line</option>
+								<option value="Point" data-toggle=".x-field, .y-field">Point</option>
+							</select>
+						</div>
+						<div class="x-field hidden">
+							<label for="x"><strong>X:</strong></label>
+							<input type="text" name="x" id="x" />
+						</div>
+						<div class="y-field hidden">
+							<label for="y"><strong>Y:</strong></label>
+							<input type="text" name="y" id="y" />
+						</div>
+						<div class="x2-field hidden">
+							<label for="x2"><strong>X2:</strong></label>
+							<input type="text" name="x2" id="x2" />
+						</div>
+						<div class="y2-field hidden">
+							<label for="y2"><strong>Y2:</strong></label>
+							<input type="text" name="y2" id="y2" />
+						</div>
+						<div class="x3-field hidden">
+							<label for="x3"><strong>X3:</strong></label>
+							<input type="text" name="x3" id="x3" />
+						</div>
+						<div class="y3-field hidden">
+							<label for="y3"><strong>Y3:</strong></label>
+							<input type="text" name="y3" id="y3" />
+						</div>
+						<div class="width-field hidden">
+							<label for="width"><strong>Width:</strong></label>
+							<input type="text" name="width" id="width" />
+						</div>
+						<div class="height-field hidden">
+							<label for="height"><strong>Height:</strong></label>
+							<input type="text" name="height" id="height" />
+						</div>
+						<div class="radius-field hidden">
+							<label for="radius"><strong>Radius:</strong></label>
+							<input type="text" name="radius" id="radius" />
+						</div>
+						<div>
+							<label for="color"><strong>Color: #</strong></label>
+							<span class="color-wrapper">
+								<input type="color" name="color" id="color" />
+							</span>
+						</div>
+						<div class="clearfix">
+							<div class="control-btns">
+								<button id="up-btn">&#8657;</button>
+								<button id="down-btn">&#8659;</button>
+								<button id="remove-btn">-</button>
+							</div>
+							<div id="stats-box">
+								<select size="6" id="drawn-shapes-options"></select>
+							</div>
+						</div>
+						<div>
+							<input type="submit" value="Add" name="submit" id="submit-btn" />
+						</div>
+						<div id="error-box"></div>
+					</form>
+				</div>
+				<div class="col-half no-margin">
+					<canvas id="shapes-draw-area" width="468" height="300">Your browser does not support canvas</canvas>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
