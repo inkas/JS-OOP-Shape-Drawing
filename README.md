@@ -1,4 +1,4 @@
-# JS OOP Shape Drawing
+# JavaScript OOP Shape Drawing
 
 JavaScript OOP App for drawing shapes on canvas. I've also created a small library.
 
